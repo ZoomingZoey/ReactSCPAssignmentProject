@@ -1,0 +1,15 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "A RESTful API that delivers SCP subject information using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "github": "https://github.com/zachcoley/ReactSCPAssignmentProject",
+  "author": "Zach Coley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
