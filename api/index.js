@@ -2,7 +2,7 @@
 const express = require('express');
 const path =  require('path');
 
-// Create a instance of express.js
+// Create an instance of express.js
 const app = express();
 
 // Set the port to 3001

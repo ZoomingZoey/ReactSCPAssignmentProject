@@ -1,15 +1,28 @@
+// Import react bootstrap components
 import {
-  Button,
   Container
 } from 'react-bootstrap';
+
+// Import react router
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+
+// Import page components
+import Home from 'pages/Home';
+import Scps from 'pages/Scps';
 
 const App = () => {
   return (
     <>
-      <Container>
-        <h1>Hello World</h1>
-        <Button variant='primary'>Click me</Button>
-      </Container>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Home/>}/>
+          <Route path='/scps' element={<Scps/>}/>
+        </Routes>
+      </Router>
     </>
   );
 }
