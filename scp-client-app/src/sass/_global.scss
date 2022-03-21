@@ -1,0 +1,12 @@
+@use './custom_bootstrap' as *;
+
+.filter-container {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 500px;
+  flex-direction: column;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    align-items: end;
+  }
+}

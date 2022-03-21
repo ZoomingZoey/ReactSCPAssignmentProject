@@ -1,2 +1,2 @@
-/api/node_modules/*
+/node_modules/*
 /scp-client-app/node_modules/*

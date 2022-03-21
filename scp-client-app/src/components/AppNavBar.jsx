@@ -7,17 +7,18 @@ import {
 
 // Import react router
 import {
-  NavLink
+  NavLink,
+  Link
 } from 'react-router-dom';
 
 // Import assets
 import logo from '../assets/icons/scp-logo.png';
 
-const AppNavBar = ({title}) => {
+const AppNavBar = () => {
   return (
     <Navbar bg="light" expand="md">
       <Container>
-        <Navbar.Brand href="#home">
+        <Link exact="true" to="/" className='navbar-brand'>
           <img
             src={logo}
             width="50"
@@ -25,13 +26,22 @@ const AppNavBar = ({title}) => {
             className="d-inline-block align-center"
             alt="SCP Foundation logo"
           />{' '}
-          {title}
-        </Navbar.Brand>
+          SCP Foundation
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">scps</Nav.Link>
+            {/*
+              Using a ternary operator here as the return of an arrow function with the parameter 'navData'
+              which is inside a JavaScript string template literal.
+
+              Ternary operator: <condition> ? <value returned if true> : <value returned if false>
+
+              So if the link is active (determined by the current route in the URL) the className will be 'nav-link active'
+              otherwise it will be only 'nav-link'.
+            */}
+            <NavLink exact="true" to="/" className={`nav-link ${(navData) => navData.isActive ? 'active' : ''}`}>Home</NavLink>
+            <NavLink to="/scps" className={`nav-link ${(navData) => navData.isActive ? 'active' : ''}`}>Scps</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -10,9 +10,9 @@ import AppNavBar from 'components/AppNavBar';
 const Home = () => {
   return (
     <>
-      <AppNavBar title='SCP Foundation'/>
-      <h2 className='text-center mt-5'>Welcome to the SCP Foundation</h2>
+      <AppNavBar/>
       <Container>
+        <h2 className='text-center mt-5'>Welcome to the SCP Foundation</h2>
 
       </Container>
     </>

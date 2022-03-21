@@ -5,8 +5,11 @@ const path =  require('path');
 // Create an instance of express.js
 const app = express();
 
-// Set the port to 3001
-const port = 3001;
+// Set the port to either the environment port set by heroku or to port 3001
+const port = process.env.PORT || 3001;
+
+// GET request for getting all SCP's from the database
+
 
 // All GET requests that we do not handle will return the index.html page of the react app
 app.get('*', (req, res) => {
