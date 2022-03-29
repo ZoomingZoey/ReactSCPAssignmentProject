@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node api/index.js",
-    "build": "cd client && npm install && npm run build"
+    "build": "cd scp-client-app && npm install && npm run build"
   },
   "github": "https://github.com/zachcoley/ReactSCPAssignmentProject",
   "author": "Zach Coley",
