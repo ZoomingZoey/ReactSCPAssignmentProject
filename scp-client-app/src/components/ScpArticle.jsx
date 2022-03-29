@@ -57,7 +57,7 @@ const ScpArticle = ({subject}) => {
           {subject.image_filename &&
             <img
               className='img-fluid rounded shadow-sm d-block mx-auto'
-              src={`http://localhost:3001/images/${subject.image_filename}`}
+              src={`/images/${subject.image_filename}`}
               alt={subject.image_caption ? subject.image_caption : subject.item}
               title={subject.item}
             />

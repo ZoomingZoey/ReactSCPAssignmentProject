@@ -9,7 +9,7 @@ const ScpCard = ({item, imageFilename}) => {
           aspectRatio="1:1"
           containerClassNames="mb-3"
           imageClassNames="scp-card-image shadow rounded"
-          imageSrc={`http://localhost:3001/images/${imageFilename ? imageFilename : 'image_unavailable.jpg'}`}
+          imageSrc={`/images/${imageFilename ? imageFilename : 'image_unavailable.jpg'}`}
         />
         <h5>{item}</h5>
       </Link>
