@@ -13,15 +13,22 @@ import {
 // Import page components
 import Home from 'pages/Home';
 import Scps from 'pages/Scps';
+import Subject from 'pages/Subject';
+
+// import components
+import ScrollToTop from 'components/ScrollToTop';
 
 const App = () => {
   return (
     <>
       <Router>
-        <Routes>
-          <Route exact path='/' element={<Home/>}/>
-          <Route path='/scps' element={<Scps/>}/>
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route exact path='/' element={<Home/>}/>
+            <Route path='/scps' element={<Scps/>}/>
+            <Route path='/scps/:item' element={<Subject/>}/>
+          </Routes>
+        </ScrollToTop>
       </Router>
     </>
   );

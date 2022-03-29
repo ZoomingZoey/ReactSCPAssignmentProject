@@ -1,10 +1,18 @@
-import { Image } from 'react-bootstrap';
+import ThumbnailImage from "./ThumbnailImage";
+import { Link } from 'react-router-dom';
 
-const ScpCard = ({item, imageThumbnailSrc}) => {
+const ScpCard = ({item, imageFilename}) => {
   return (
     <div>
-      <Image src='https://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png' fluid className='rounded mb-2'/>
-      <h5>{item}</h5>
+      <Link key={item} className="scp-card-link" to={`/scps/${item.replace('SCP-', '')}`}>
+        <ThumbnailImage
+          aspectRatio="1:1"
+          containerClassNames="mb-3"
+          imageClassNames="scp-card-image shadow rounded"
+          imageSrc={`http://localhost:3001/images/${imageFilename ? imageFilename : 'image_unavailable.jpg'}`}
+        />
+        <h5>{item}</h5>
+      </Link>
     </div>
   );
 }
